@@ -25,7 +25,7 @@ class Bank:
             if amount <= self.balance:
                 self.balance -= amount
                 print(f"Снятие: {amount}. Баланс: {self.balance}")
-            else:
+            if amount > self.balance:
                 print("Запрос отклонён, недостаточно средств")
 
             time.sleep(0.001)
